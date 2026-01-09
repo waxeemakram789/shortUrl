@@ -47,66 +47,7 @@ class InvitationController extends Controller
         return view('invite.create');
     }
 
-    // public function store(Request $request)
-    // {
-    //     $authUser = auth()->user();
-
-    //     if ($authUser->isSuperAdmin()) {
-
-    //         if ($request->role !== 'Admin') {
-    //             abort(403);
-    //         }
-
-    //         $request->validate([
-    //             'name' => 'required',
-    //             'email' => 'required|email|unique:users',
-    //             'company_name' => 'required',
-    //             'password' => 'required|min:6'
-    //         ]);
-
-    //         $company = Company::create([
-    //             'name' => $request->company_name
-    //         ]);
-
-    //         $role = Role::where('name', 'Admin')->first();
-            
-    //         User::create([
-    //             'name' => $request->name,
-    //             'email' => $request->email,
-    //             'password' => bcrypt($request->password),
-    //             'company_id' => $company->id,
-    //             'role_id' => $role->id
-    //         ]);
-
-    //         return back()->with('success', 'Admin invited successfully');
-    //     }
-
-    //     if ($authUser->isAdmin()) {
-
-    //         if (!in_array($request->role, ['Admin', 'Member'])) {
-    //             abort(403);
-    //         }
-
-    //         $request->validate([
-    //             'name' => 'required',
-    //             'email' => 'required|email|unique:users'
-    //         ]);
-
-    //         $role = Role::where('name', $request->role)->first();
-
-    //         User::create([
-    //             'name' => $request->name,
-    //             'email' => $request->email,
-    //             'password' => bcrypt('password'),
-    //             'company_id' => $authUser->company_id,
-    //             'role_id' => $role->id
-    //         ]);
-
-    //         return back()->with('success', 'User invited successfully');
-    //     }
-
-    //     abort(403);
-    // }
+    
 
 
     public function store(Request $request)
