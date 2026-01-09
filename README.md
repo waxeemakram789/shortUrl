@@ -61,5 +61,13 @@ The system allows users to generate and manage short URLs based on their assigne
 
 Install Dependencies
 
-composer install
-npm install
+- composer install
+- npm install
+
+## 🗄️ Database Migration & Seeding
+
+After configuring your database in the `.env` file, run the following commands:
+
+```bash
+php artisan migrate
+php artisan db:seed
